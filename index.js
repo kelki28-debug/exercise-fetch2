@@ -11,10 +11,13 @@ fetch(endPoint,options)
 .then((result =>{
     result.map(flag =>{
         let li = document.createElement('li');
+        let p = document.createElement('p')
+        let text = document.createTextNode(flag.name)
         let img = document.createElement('img');
-        console.log(flag.flag)
         img.setAttribute('src', flag.flag);
+        p.appendChild(text)
         li.appendChild(img);
+        li.appendChild(p)
         ul.appendChild(li)
 
     })
